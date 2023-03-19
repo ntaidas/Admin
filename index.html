@@ -14,62 +14,233 @@
                 <div class="side-head">The Grid</div>
             </div>
             <div class="controler">
-                <img src="Icons/home.svg">
-                <div class="side-button"><a>Home</a></div>
-                <img src="Icons/account-box.svg">
-                <div class="side-button"><a>Profile</a></div>
-                <img src="Icons/message.svg">
-                <div class="side-button"><a>Messages</a></div>
-                <img src="Icons/history.svg">
-                <div class="side-button"><a>History</a></div>
-                <img src="Icons/file-document-multiple-outline.svg">
-                <div class="side-button"><a>Tasks</a></div>
-                <img src="Icons/account-multiple.svg">
-                <div class="side-button"><a>Communities</a></div>
+                <div class="icons">
+                    <img src="Icons/home.svg">
+                    <img src="Icons/account-box.svg">
+                    <img src="Icons/message.svg">
+                    <img src="Icons/history.svg">
+                    <img src="Icons/file-document-multiple-outline.svg">
+                    <img src="Icons/account-multiple.svg">
+                </div>
+                <div class="side-buttons">
+                    <div class="side-button"><a>Home</a></div>
+                    <div class="side-button"><a>Profile</a></div>
+                    <div class="side-button"><a>Messages</a></div>
+                    <div class="side-button"><a>History</a></div>
+                    <div class="side-button"><a>Tasks</a></div>
+                    <div class="side-button"><a>Communities</a></div>
+                </div>   
             </div>
             <div class="options">
-                <img src="Icons/cogs.svg">
-                <div class="side-button"><a>Settings</a></div>
-                <img src="Icons/help.svg">
-                <div class="side-button"><a>Support</a></div>
-                <img src="Icons/shield.svg">
-                <div class="side-button"><a>Privacy</a></div>
+                <div class="icons">
+                    <img src="Icons/cogs.svg">
+                    <img src="Icons/help.svg">
+                    <img src="Icons/shield.svg">
+                </div>
+                <div class="side-buttons">
+                    <div class="side-button"><a>Settings</a></div>
+                    <div class="side-button"><a>Support</a></div>
+                    <div class="side-button"><a>Privacy</a></div>
+
+                </div>
+                
+                
+                
+                
+                
             </div>
         </div>
-
         <div class="main">
-
             <div class="header">
                 <div class="top">
                     <div class="search">
-                        <img src="Icons/cogs.svg">
-                        <input type="text" for="searchbar" placeholder="Search...">
+                        <div class="search-icon"><img src="Icons/cogs.svg"></div>
+                        <input type="text" for="searchbar" placeholder="Search..." name="searchbar" class="searchbar">
                     </div>
                     <div class="home">
                         <img src="Icons/message.svg">
-                        <img src="">
-                        <p>Architect Ginkas</p>
+                        <img src="/Icons/avatar.png">
+                        <div class="user-name">Architect Ginkas</div>
                     </div>
                 </div>
                 
-                <div class="card">
-                    <div class="hero">
-                        <img src="">
+                <div class="welcome-bar">
+                    <div class="plate">
+                        <div class="face"><img src="/Icons/avatar.png"></div>
                         <div class="welcome" >
                             <div class="greet">Welcome back,</div>
                             <div class="user-name">Architect Ginkas (@admin)</div>
                         </div>
                     </div>
-                    <div class="hero-controls">
+                    <div class="plate-controls">
                         <button>New</button>
                         <button>Upload</button>
                         <button>Share</button>
                     </div>
                 </div>
             </div>
-
             <div class="container">
-                cpntainer
+                <div class="wrap-content">
+                    <p class="title">Your Projects</p>
+                    <div class="content">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-title">Best App Ever</div>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Habitasse platea dictumst quisque sagittis purus sit amet volutpat.
+                                </p>
+                            </div>
+                            <div class="card-controls">
+                                <button class="fav"><img src="Icons/heart.svg"></button>
+                                <button class="view"><img src="Icons/eye-check.svg"></button>
+                                <button class="share"><img src="Icons/share.svg"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-title">Love of My Life</div>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Habitasse platea dictumst quisque sagittis purus sit amet volutpat.
+                                </p>
+                            </div>
+                            <div class="card-controls">
+                                <button class="fav"><img src="Icons/heart.svg"></button>
+                                <button class="view"><img src="Icons/eye-check.svg"></button>
+                                <button class="share"><img src="Icons/share.svg"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-title">Assbook</div>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Habitasse platea dictumst quisque sagittis purus sit amet volutpat.
+                                </p>
+                            </div>
+                            <div class="card-controls">
+                                <button class="fav"><img src="Icons/heart.svg"></button>
+                                <button class="view"><img src="Icons/eye-check.svg"></button>
+                                <button class="share"><img src="Icons/share.svg"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-title">Crowdfunder 3000</div>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Habitasse platea dictumst quisque sagittis purus sit amet volutpat.
+                                </p>
+                            </div>
+                            <div class="card-controls">
+                                <button class="fav"><img src="Icons/heart.svg"></button>
+                                <button class="view"><img src="Icons/eye-check.svg"></button>
+                                <button class="share"><img src="Icons/share.svg"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-title">SkyNet</div>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Habitasse platea dictumst quisque sagittis purus sit amet volutpat.
+                                </p>
+                            </div>
+                            <div class="card-controls">
+                                <button class="fav"><img src="Icons/heart.svg"></button>
+                                <button class="view"><img src="Icons/eye-check.svg"></button>
+                                <button class="share"><img src="Icons/share.svg"></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-title">Time Travel</div>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Habitasse platea dictumst quisque sagittis purus sit amet volutpat.
+                                </p>
+                            </div>
+                            <div class="card-controls">
+                                <button class="fav"><img src="Icons/heart.svg"></button>
+                                <button class="view"><img src="Icons/eye-check.svg"></button>
+                                <button class="share"><img src="Icons/share.svg"></button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+               <div class="news">
+                <div class="wrap-public">
+                    <p class="title">Announcements</p>
+                    <div class="public ">
+                        <div class="item">
+                            <div class="item-title">Site Maintenance</div>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Habitasse platea dictumst quisque sagittis purus sit amet volutpat.
+                            </p>
+                        </div>
+                        <div class="item middle">
+                            <div class="item-title">"Bring your girlfriend to work" Day</div>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                 Habitasse platea dictumst quisque sagittis purus sit amet volutpat.
+                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="item-title">Updated Privacy Policy</div>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                 Enim neque volutpat ac tincidunt vitae.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-trend">
+                    <p class="title">Trending</p>
+                    <div class="trending">  
+                        <div class="user">
+                            <div class="user-face">
+                                <img src="/Icons/avatar.png">
+                            </div>
+                            <div class="user-handle">
+                                <h6>@ginkas</h6>
+                                <p>DEVIL MAY CRY</p>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <div class="user-face">
+                                <img src="/Icons/avatar.png">
+                            </div>
+                            <div class="user-handle">
+                                <h6>@ginakas</h6>
+                                <p>REQUIEM INDUSTIRES</p>
+                            </div>           
+                        </div>
+                        <div class="user">
+                            <div class="user-face">
+                                <img src="/Icons/avatar.png">
+                            </div>
+                            <div class="user-handle">
+                                <h6>@akuma</h6>
+                                <p>SORTING HAT</p>
+                            </div>
+                            
+                        </div>
+                        <div class="user">
+                            <div class="user-face">
+                                <img src="/Icons/avatar.png">
+                            </div>
+                            <div class="user-handle">
+                                <h6>@gina</h6>
+                                <p>LIFE CHANGING OPORTUNITITIES</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                </div>
             </div>
         </div>
 
