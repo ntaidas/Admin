@@ -22,27 +22,31 @@ body,
     
     
 }
-.wrap:after {
-	content: "";
-    	position: absolute;	
-        width: 390px;	
-        height: 338px;	
-        top: 15px;	
-        left: -50px;	
-        z-index: -1;	
-        background-color: #ED0707;	
-        box-shadow: inset 5px 170px 200px 78px #121412;
-        margin-left: 10px;
-        margin-right: ;
-}
 
 img{
     height:30px;
 }
 
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007bff, 0 0 40px #007bff, 0 0 50px #007bff, 0 0 60px #007bff, 0 0 70px #007bff;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #107CEF, 0 0 40px #107CEF, 0 0 50px #107CEF, 0 0 60px #107CEF, 0 0 70px #107CEF, 0 0 80px #107CEF;
+    }
+  }
+
 /* Sidebar------------------------------------------------------------- */
 .sidebar{
-    background-color: #107cefbe;
+    background-color: #0a417cbe;
     color: azure;
     display: grid;
     grid-template-rows:auto 3fr 5fr 5fr;
@@ -52,7 +56,7 @@ img{
     gap: 10px;
     padding: 10px;
     font-weight: 600;
-    box-shadow:inset 5px -5px 150px 100px #000000; 
+    box-shadow: 5px -5px 20px 10px #000000; 
     
     
 }
@@ -82,15 +86,24 @@ img{
 .side-buttons{
     display: grid;
     gap: 1rem;
+    align-items: center;
 }
 
 .icons{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(58px 3);
     justify-content: end;
 }
 .icons>img{
     height: 45px;
+}
+a{
+    translate: ease-in-out 0.5s;
+}
+a:hover{
+    font-size: 58px;
+    color:rgb(251, 251, 253);
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 /*MAIN======================================================================*/
@@ -119,6 +132,11 @@ img{
     grid-template-columns: 5fr 2fr;
     padding: 10px;
 }
+.top{
+    background-color: #0a417cbe;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
 
 .home{
     display: grid;
@@ -133,16 +151,14 @@ img{
     align-items: end;
 }
 .plate-controls>button{
-    background-color: rgba(59, 59, 235, 0.685);
+    background-color: #0a417cbe;
     border-radius: 50px;
     border: 0;
     font-size: 20px;
     height: 30px;
 }
 
-a:hover{
-    color:blue;
-}
+
 
 .welcome{
     display: grid;
@@ -185,10 +201,11 @@ a:hover{
 }
 /*CONTAINER==================================================================*/
 .container{
-    background-color: rgba(168, 190, 196, 0.315);
+    background-color: rgba(45, 52, 54, 0.315);
     display: grid;
     grid-template-columns:  3fr 1fr;
     font-size: 20px;
+    box-shadow: inset -15px 15px 28px -18px #FFFFFF;
 }
 
 .wrap-content{
@@ -209,7 +226,7 @@ a:hover{
     display: grid;
     grid-template-rows: auto 3fr 1fr;
     box-shadow: 
-    inset 10px 0px 61px -30px #107CEF,
+    inset 10px 0px 61px -30px #007bff,
           0rem 0rem 2rem 0.5rem  rgb(0, 0, 0) ;
     
 }
@@ -217,7 +234,7 @@ a:hover{
 .card-controls{
     display: flex;
     justify-content: end;
-    background-color: #000000;
+    background-color: none;
     box-shadow: inset 10px 0px 61px -30px #107CEF,
     
 }
@@ -233,19 +250,17 @@ a:hover{
     font-weight: 900;
     border-bottom: 2px solid rgb(230, 224, 224, 0.5);
     
+    
 }
 
 .card-controls>button{
     opacity: 70%;
-    background-color: rgba(44, 11, 189, 0.486);
+    background-color: #0a417cbe 0.7;
     border:none;
-    box-shadow: inset 0px 0px 10px 10px #af1010,
+    border-radius: 50px;
     
 }
-.card-controls>button::after{
-    background-color: #8a1010;
-    box-shadow: inset 0px 0px 61px 100px #107CEF,
-}
+
 
 .card-content>p{
     font-size: 16px;
@@ -259,7 +274,7 @@ a:hover{
 }
 .news{
     display: grid;
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .public,
@@ -286,6 +301,23 @@ a:hover{
 .user{
     display: grid;
     grid-template-columns: 1fr 4fr;
+    
+    text-shadow: 
+    0 0 4px #fff, 
+    0 0 8px #107CEF,
+    0 0 16px #107CEF;
+    
+    
+}
+
+
+.user-handle>p{
+    color: #fff;
+    text-shadow: none;
+    font-style: normal;
+
+    
+    
 }
 .item{
     padding: 10px;
