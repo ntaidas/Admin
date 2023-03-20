@@ -1,10 +1,39 @@
 
+@font-face {
+    font-family: roboto-font;
+    src: url(./fonts/RobotoCondensed-Regular.ttf);
+  }
 body{
-   
+    display: flex;
+    justify-content: center;
+    font-family: roboto-font, sans-serif;
+}
+
+body,
+.wrap{
+    padding: 0%;
+    margin: 0%;
+    max-height: 100vh ;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 555px 1380px;
+    background-color: rgba(0, 0, 0, 0.959);
+    color: white;
     
- 
+    
+    
+}
+.wrap:after {
+	content: "";
+    	position: absolute;	
+        width: 390px;	
+        height: 338px;	
+        top: 15px;	
+        left: -50px;	
+        z-index: -1;	
+        background-color: #ED0707;	
+        box-shadow: inset 5px 170px 200px 78px #121412;
+        margin-left: 10px;
+        margin-right: ;
 }
 
 img{
@@ -13,17 +42,19 @@ img{
 
 /* Sidebar------------------------------------------------------------- */
 .sidebar{
-    background-color: rgb(214, 146, 20);
+    background-color: #107cefbe;
     color: azure;
     display: grid;
-    grid-template-rows:auto 1fr 5fr 5fr;
+    grid-template-rows:auto 3fr 5fr 5fr;
     justify-content:baseline;
     align-items: center;
-    font-size: 30px;
-    gap: 5px;
+    font-size: 50px;
+    gap: 10px;
     padding: 10px;
     font-weight: 600;
-    max-height: 1300px;
+    box-shadow:inset 5px -5px 150px 100px #000000; 
+    
+    
 }
 
 .logo,
@@ -31,18 +62,18 @@ img{
 .options{
     display:grid;
     grid-template-columns: 1fr 3fr;
-    gap: 1rem;
+    gap: 10px;
     justify-self: start;
     width: 100%;
 }
 #logo{
-    width: 45px;
-    height: 45px;
+    width: 80px;
+    height: 80px;
+    justify-content: end;
 }
 .logo{
     display: grid;
-    font-size: 45px;
-    justify-items: end;
+    font-size: 80px;
 }
 .options{
     
@@ -50,10 +81,12 @@ img{
 .icons,
 .side-buttons{
     display: grid;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .icons{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: end;
 }
 .icons>img{
@@ -64,6 +97,7 @@ img{
 .main{
     display: grid;
     grid-template-rows:auto 1fr 10fr;
+    max-height: 100vh;
 }
 /*TOP=======================================================================*/
 .header{
@@ -154,9 +188,11 @@ a:hover{
     background-color: rgba(168, 190, 196, 0.315);
     display: grid;
     grid-template-columns:  3fr 1fr;
-}
-.container{
     font-size: 20px;
+}
+
+.wrap-content{
+    max-height: 90vh;
 }
 
 .content{
@@ -165,18 +201,25 @@ a:hover{
 }
 
 .card{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     margin: 2rem;
     padding: 2rem;
     border: 1px solid;
     border-radius: 15px;
     display: grid;
     grid-template-rows: auto 3fr 1fr;
+    box-shadow: 
+    inset 10px 0px 61px -30px #107CEF,
+          0rem 0rem 2rem 0.5rem  rgb(0, 0, 0) ;
+    
 }
 
 .card-controls{
     display: flex;
     justify-content: end;
+    background-color: #000000;
+    box-shadow: inset 10px 0px 61px -30px #107CEF,
+    
 }
 
 .title{
@@ -188,15 +231,25 @@ a:hover{
 .card-title{
     font-size: 25px;
     font-weight: 900;
+    border-bottom: 2px solid rgb(230, 224, 224, 0.5);
+    
 }
 
 .card-controls>button{
-    background-color: white;
-    border: none;
+    opacity: 70%;
+    background-color: rgba(44, 11, 189, 0.486);
+    border:none;
+    box-shadow: inset 0px 0px 10px 10px #af1010,
+    
+}
+.card-controls>button::after{
+    background-color: #8a1010;
+    box-shadow: inset 0px 0px 61px 100px #107CEF,
 }
 
 .card-content>p{
     font-size: 16px;
+    overflow: auto;
 
 }
 /*CONTAINER-SIDE===========================================================*/
@@ -211,11 +264,12 @@ a:hover{
 
 .public,
 .trending{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     margin: 1rem;
     padding: 0.5rem;
     border: 1px solid;
     border-radius: 15px;
+    box-shadow: inset 10px 0px 61px -30px #107CEF;
 }
 
 .public{
@@ -239,4 +293,5 @@ a:hover{
 p{
     font-size: 12px;
     font-style: italic;
+    overflow: auto;
 }
