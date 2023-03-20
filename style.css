@@ -4,18 +4,19 @@
     src: url(./fonts/RobotoCondensed-Regular.ttf);
   }
 body{
+    max-height: 100vh;
+    padding: 0%;
+    margin: 0%;
     display: flex;
     justify-content: center;
     font-family: roboto-font, sans-serif;
+    background-color: rgba(0, 0, 0, 0.959);
+    color: white;
 }
 
-body,
 .wrap{
-    padding: 0%;
-    margin: 0%;
-    max-height: 100vh ;
     display: grid;
-    grid-template-columns: 555px 1380px;
+    grid-template: 1fr 5fr / 1fr 5fr;
     background-color: rgba(0, 0, 0, 0.959);
     color: white;
     
@@ -46,10 +47,14 @@ img{
 
 /* Sidebar------------------------------------------------------------- */
 .sidebar{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:1 ;
+    grid-row-end:7;
     background-color: #0a417cbe;
     color: azure;
     display: grid;
-    grid-template-rows:auto 3fr 5fr 5fr;
+    grid-template-rows: 1fr 5fr 5fr;
     justify-content:baseline;
     align-items: center;
     font-size: 50px;
@@ -61,15 +66,6 @@ img{
     
 }
 
-.logo,
-.controler,
-.options{
-    display:grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 10px;
-    justify-self: start;
-    width: 100%;
-}
 #logo{
     width: 80px;
     height: 80px;
@@ -79,9 +75,17 @@ img{
     display: grid;
     font-size: 80px;
 }
+
+.logo,
+.controler,
 .options{
-    
-}
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    justify-self: start;
+    width: 100%;
+} 
+
 .icons,
 .side-buttons{
     display: grid;
@@ -97,6 +101,11 @@ img{
 .icons>img{
     height: 45px;
 }
+
+.options{
+    
+}
+
 a{
     translate: ease-in-out 0.5s;
 }
@@ -107,64 +116,29 @@ a:hover{
 }
 
 /*MAIN======================================================================*/
-.main{
-    display: grid;
-    grid-template-rows:auto 1fr 10fr;
-    max-height: 100vh;
-}
 /*TOP=======================================================================*/
 .header{
     display: grid;
+    grid-template-columns: 9fr 2fr 2fr 2fr;
     grid-template-rows: 1fr 1fr;
-}
-.plate{
-    display: grid;
-    grid-template-columns: 1fr 7fr;
-    gap: 10px;
-}
-
-.welcome{
-    font-size: 30px;
-}
-.top,
-.welcome-bar{
-    display: grid;
-    grid-template-columns: 5fr 2fr;
-    padding: 10px;
-}
-.top{
-    background-color: #0a417cbe;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-}
-
-.home{
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    
     align-items: center;
 }
-.plate-controls{
+
+.top{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    align-items: end;
+    background-color: #107CEF;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
 }
-.plate-controls>button{
-    background-color: #0a417cbe;
-    border-radius: 50px;
-    border: 0;
-    font-size: 20px;
-    height: 30px;
+.messages.top{
+    justify-items: end;
+}
+.user-name.top{
+    justify-items: start;
 }
 
 
-
-.welcome{
-    display: grid;
-    align-content: center;
-
-}
 .search{
     display: grid;
     grid-template-columns: 1fr 8fr;
@@ -185,41 +159,72 @@ a:hover{
     font-size: 20px;
 
 }
-.face{
-    display: grid;
-    justify-content: end;
-    
-}
-.face>img{
-    width: 64;
-    height: 64;
-}
 
 .user-name{
     font-size: 30px;
     font-weight: 600;
 }
+.plate{
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    gap: 10px;
+}
+
+.face{
+    display: grid;
+    justify-content: end;
+    
+}
+
+.face>img{
+    width: 64;
+    height: 64;
+}
+
+.welcome{
+    display: grid;
+    align-content: center;
+
+}
+
+.header>button{
+    background-color: #0a417cbe;
+    border-radius: 50px;
+    border: 0;
+    font-size: 20px;
+    height: 30px;
+}
+
 /*CONTAINER==================================================================*/
 .container{
     background-color: rgba(45, 52, 54, 0.315);
     display: grid;
-    grid-template-columns:  3fr 1fr;
+    grid-template-columns:  1fr 1fr 0.8fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
     font-size: 20px;
+    padding: 40px 25px;
     box-shadow: inset -15px 15px 28px -18px #FFFFFF;
 }
 
 .wrap-content{
     max-height: 90vh;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 .content{
+
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 0;
+    gap: 20px;
 }
 
 .card{
     background-color: rgb(0, 0, 0);
-    margin: 2rem;
     padding: 2rem;
     border: 1px solid;
     border-radius: 15px;
@@ -280,7 +285,6 @@ a:hover{
 .public,
 .trending{
     background-color: rgb(0, 0, 0);
-    margin: 1rem;
     padding: 0.5rem;
     border: 1px solid;
     border-radius: 15px;
@@ -299,9 +303,9 @@ a:hover{
 } 
 
 .user{
+    
     display: grid;
     grid-template-columns: 1fr 4fr;
-    
     text-shadow: 
     0 0 4px #fff, 
     0 0 8px #107CEF,
