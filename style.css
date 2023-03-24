@@ -37,14 +37,61 @@ img{
   
   @-webkit-keyframes glow {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007bff, 0 0 40px #007bff, 0 0 50px #007bff, 0 0 60px #007bff, 0 0 70px #007bff;
+      text-shadow: 
+       0 0 10px #fff,
+       0 0 20px #fff,
+       0 0 30px #007bff,
+       0 0 40px #007bff,
+       0 0 50px #007bff,
+       0 0 60px #007bff,
+       0 0 70px #007bff;
     }
     
     to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #107CEF, 0 0 40px #107CEF, 0 0 50px #107CEF, 0 0 60px #107CEF, 0 0 70px #107CEF, 0 0 80px #107CEF;
+      text-shadow: 0 0 20px #fff,
+       0 0 30px #107CEF,
+       0 0 40px #107CEF,
+       0 0 50px #107CEF,
+       0 0 60px #107CEF,
+       0 0 70px #107CEF,
+       0 0 80px #107CEF;
     }
   }
 
+  @-webkit-keyframes neon {
+    from {
+      box-shadow:
+       0 0 5px #fff,
+       0 0 10px #ff0000,
+       0 0 20px #ff0000,
+       0 0 30px #ff0000;
+      text-shadow: 
+       0 0 10px #fff,
+       0 0 20px #fff,
+       0 0 30px #ff0000,
+       0 0 40px #ff0000,
+       0 0 50px #ff0000,
+       0 0 60px #ff0000,
+       0 0 70px #ff0000;
+    }
+    
+    to {
+      box-shadow:
+       0 0 5px #fff,
+       0 0 10px #ff0000,
+       0 0 20px #ff0000,
+       0 0 30px #ff0000,
+       0 0 40px #ff0000;
+      text-shadow: 
+       0 0 20px #fff,
+       0 0 30px #ff0000,
+       0 0 40px #ff0000,
+       0 0 50px #ff0000,
+       0 0 60px #ff0000,
+       0 0 70px #ff0000,
+       0 0 80px #ff0000;
+    }
+  }
 /* Sidebar------------------------------------------------------------- */
 .sidebar{
     grid-column-start:1;
@@ -112,7 +159,7 @@ a{
 a:hover{
     font-size: 58px;
     color:rgb(251, 251, 253);
-    animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 20s ease-in-out infinite alternate;
 }
 
 /*MAIN======================================================================*/
@@ -190,12 +237,30 @@ a:hover{
 .header>button{
     background-color: #000000be;
     border-radius: 50px;
-    color: red;
+    color: rgb(255, 255, 255);
     border: 1px solid red;
     font-size: 20px;
     height: 30px;
+    box-shadow:
+       0 0 5px #fff,
+       0 0 10px #ff0000,
+       0 0 20px #ff0000,
+       0 0 30px #ff0000,
+       inset 0 0 5px #fff,
+       inset 0 0 10px #ff0000,
+       inset 0 0 20px #ff0000;
+    //**animation: neon 1s ease-in-out infinite alternate;*/
 }
-
+.header>button:hover{
+    text-shadow: 
+       0 0 10px #fff,
+       0 0 20px #ff0000,
+       0 0 30px #ff0000,
+       0 0 40px #ff0000,
+       0 0 50px #ff0000,
+       0 0 60px #ff0000,
+       0 0 70px #ff0000;
+}
 
 /*CONTAINER==================================================================*/
 .container{
